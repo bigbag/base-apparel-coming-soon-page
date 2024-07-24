@@ -2,32 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
+  <div class="container">
 
-  We're coming soon
+    <header>
+      <div class="logo">
+        <a href="#" id="logo"><img src="./images/logo.svg" alt="Site logo"></a>
+      </div>
+    </header>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <section class="hero-image">
+      <picture>
+        <source srcset="./images/hero-desktop.jpg" media="(min-width: 376px)">
+        <img class="hero-mobile" src="./images/hero-mobile.jpg"  alt="Hero image for mobile"/>
+      </picture>
+  </section>
+    <main>
+      <section class="form-intro">
 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+        <div class="intro-text">
+
+        <h1 class="title">
+          <span>We're</span>
+          <br/>
+          coming
+          <br/>
+          soon
+        </h1>
+        <p class="description">Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      </div> <!-- .intro-text -->
+
+        <form class="signup-form" novalidate>
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <span class="error-icon"><img src="./images/icon-error.svg" alt="Form validation error icon"></span>
+            <button class="btn-submit" aria-label="Submit form"><img src="./images/icon-arrow.svg" alt="Form submit button arrow icon"></button>
+            <p class="validation-message"></p>
+        </form>
+
+      </section><!-- .form-intro -->
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a>.
+        <span> Coded by Pavel Liashkov</span>
+      </p>
+    </footer>
+
+ </div>
+  <script src="js/script.js"></script>
+  </body>
 </html>
